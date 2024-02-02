@@ -1,4 +1,3 @@
+my_list = [1,2,3,4,5]
 
-x = y = 1
-x += 1
-print(x, y)
+print(my_list)
