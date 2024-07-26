@@ -1,8 +1,20 @@
 
+class MyException(Exception):
+    
+    def __init__(self, msg):
+        self.msg = f'My Exception Caught: {msg}'
 
-arr = [1,2,3,4,5,1,2,6,7,3,9]
+def my_fn(a, b):
 
-st = 'test'
-st += 'new'
+    if a/b < 1:
+        raise MyException('Divisor cant be less than dividend')
+    
+    return a/b
+try:
+    print(my_fn(2, 3))
+except MyException as e:
+    print(str(e))
 
-print(arr.count(5))
+x = 2
+
+print(x)
