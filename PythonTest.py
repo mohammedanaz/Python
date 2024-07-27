@@ -1,9 +1,10 @@
-def my_fn(*args, **kwargs):
-    
-    value = kwargs.get('name')
-    if value:
-        print(value)
-    else:
-        print('no such key')
+list_of_tuples = [
+    (1, 'apple'),
+    (2, 'banana'),
+    (3, 'cherry'),
+    (4, 'date'),
+    (5, 'elderberry')
+]
+my_dict = {k: v.upper() for k,v in list_of_tuples}
 
-my_fn(temp='Adam')
+print(my_dict)
