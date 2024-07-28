@@ -8,6 +8,20 @@ list_of_tuples = [
     (5, 'elderberry')
 ]
 
+my_dict = dict.fromkeys(list_of_tuples)
+my_dict.setdefault(6, 'default')
+print(len(list_of_tuples), len(my_dict))
+
+def add(x, y):
+    print(x + y)
+
+def add(x, y, z):
+    print(x + y + z)
+
+add(1, 2, 3)
+
+
+
 class MyClass():
     __cls_var = 'i am class var'
     current_year = datetime.now().year
