@@ -42,6 +42,8 @@ class MyClass():
         
         if isinstance(object, MyClass):
             return self.name == object.name and self.age == object.age
+        else:
+            return 'objects are not same class.'
 
     def greet(self):
         print(f'hi {self.name}. you are {self.age} years old.')
@@ -54,8 +56,9 @@ class MyClass():
 
 obj1 = MyClass.create_obj('adam', 1990)
 obj2 = MyClass.create_obj('ali', 1990)
+obj3 = 10
 obj1.greet()
 
-print(obj1 == obj2)
+print(obj1 == obj3)
 
 
