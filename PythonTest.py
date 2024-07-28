@@ -24,10 +24,19 @@ add(1, 2, 3)
 
 class MyClass():
     __cls_var = 'i am class var'
+
+    def __new__(cls, *args, **kwargs):
+        print('new method called')
+        return super(MyClass, cls).__new__(cls)
+
     current_year = datetime.now().year
     def __init__(self, name, age) -> None:
+        print('init method called')
         self.name = name
         self.age = age
+
+    def __len__(self):
+        return 10
 
     def greet(self):
         print(f'hi {self.name}. you are {self.age} years old.')
@@ -40,3 +49,5 @@ class MyClass():
 
 obj1 = MyClass.create_obj('adam', 1990)
 obj1.greet()
+
+print(len(obj1))
