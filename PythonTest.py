@@ -6,7 +6,7 @@ list_of_tuples = [
     (5, 'elderberry')
 ]
 
-class Myclass():
+class MyClass():
     __cls_var = 'i am class var'
 
     def __init__(self, msg):
@@ -15,5 +15,5 @@ class Myclass():
     def call_var(self):
         print(f'class var is {self.__cls_var}')
 
-obj1 = Myclass('msg1')
-print(obj1._MyClass__cls_var)
+obj1 = MyClass('msg1')
+print(obj1.__cls_var)
