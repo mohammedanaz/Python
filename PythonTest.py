@@ -37,6 +37,11 @@ class MyClass():
 
     def __len__(self):
         return 10
+    
+    def __eq__(self, object):
+        
+        if isinstance(object, MyClass):
+            return self.name == object.name and self.age == object.age
 
     def greet(self):
         print(f'hi {self.name}. you are {self.age} years old.')
@@ -48,6 +53,9 @@ class MyClass():
 
 
 obj1 = MyClass.create_obj('adam', 1990)
+obj2 = MyClass.create_obj('ali', 1990)
 obj1.greet()
 
-print(len(obj1))
+print(obj1 == obj2)
+
+
