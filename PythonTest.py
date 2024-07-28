@@ -5,6 +5,15 @@ list_of_tuples = [
     (4, 'date'),
     (5, 'elderberry')
 ]
-my_dict = {k: v.upper() for k,v in list_of_tuples}
 
-print(my_dict)
+class Myclass():
+    __cls_var = 'i am class var'
+
+    def __init__(self, msg):
+        self.msg = msg
+
+    def call_var(self):
+        print(f'class var is {self.__cls_var}')
+
+obj1 = Myclass('msg1')
+print(obj1._MyClass__cls_var)
