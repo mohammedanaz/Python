@@ -1,3 +1,5 @@
+from datetime import datetime
+
 list_of_tuples = [
     (1, 'apple'),
     (2, 'banana'),
@@ -8,12 +10,19 @@ list_of_tuples = [
 
 class MyClass():
     __cls_var = 'i am class var'
+    current_year = datetime.now().year
+    def __init__(self, name, age) -> None:
+        self.name = name
+        self.age = age
 
-    def __init__(self, msg):
-        self.msg = msg
+    def greet(self):
+        print(f'hi {self.name}. you are {self.age} years old.')
 
-    def call_var(self):
-        print(f'class var is {self.__cls_var}')
+    @classmethod
+    def create_obj(cls, name, year):
+        age = cls.current_year - year
+        return cls(name, age)
 
-obj1 = MyClass('msg1')
-print(obj1.__cls_var)
+
+obj1 = MyClass.create_obj('adam', 1990)
+obj1.greet()
