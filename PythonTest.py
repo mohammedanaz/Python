@@ -16,3 +16,6 @@ pattern = r'(\w+)i(\w+)'
 grp1 = re.findall(pattern, txt1)
 
 print(grp1)
+
+first, last = grp1[0]
+print(first, last)
