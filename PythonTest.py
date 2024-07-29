@@ -4,4 +4,4 @@ pattern = re.compile(r'\bsa')
 
 result = pattern.search(txt)
 
-print(result)
+print(result.string,'\n', result.span(),'\n', result.start(),'\n', result.group())
