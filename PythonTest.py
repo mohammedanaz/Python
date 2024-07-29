@@ -5,3 +5,7 @@ pattern = re.compile(r'\bsa')
 result = pattern.search(txt)
 
 print(result.string,'\n', result.span(),'\n', result.start(),'\n', result.group())
+
+sub = re.sub('sa', 'newWord', txt)
+
+print(sub)
