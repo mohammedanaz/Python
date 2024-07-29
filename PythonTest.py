@@ -6,6 +6,6 @@ result = pattern.search(txt)
 
 print(result.string,'\n', result.span(),'\n', result.start(),'\n', result.group())
 
-sub = re.sub('sa', 'newWord', txt)
+sub = re.sub(r'\bs.*e\b', 'newWord', txt)
 
 print(sub)
