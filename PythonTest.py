@@ -10,8 +10,9 @@ sub = re.sub(r' ', '-', txt)
 
 print(sub)
 
-txt1 = 'Adam is here'
+txt1 = 'this is a sample text. this contains this.'
 
-result1 = re.search(r'\bA[a,d,m]{3}', txt1)
+pattern = r'(\w+)i(\w+)'
+grp1 = re.findall(pattern, txt1)
 
-print(result1.group())
+print(grp1)
