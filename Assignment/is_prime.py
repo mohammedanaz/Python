@@ -1,4 +1,4 @@
-def prime(n,d=2):
+def is_prime(n,d=2):
     
     if n ==1:
         return False
@@ -7,13 +7,13 @@ def prime(n,d=2):
     elif n % d == 0:
         return False
     else:
-        return prime(n,d+1)
+        return is_prime(n,d+1)
     
 
 my_list = [1,2,3,4,5,6,7,8,9,10]
 
 for x in range(len(my_list)):
-    if prime(my_list[x]):
+    if is_prime(my_list[x]):
         my_list[x] = 'Prime'
 
 print(my_list)
