@@ -9,7 +9,7 @@ def custom_range(*args):
     if arg_length:
         for x in args:
             if type(x) != int:
-                raise type('args should be an integer')
+                raise TypeError('args should be an integer')
     if arg_length == 1:
         start = 0
         stop = args[0]
@@ -24,10 +24,12 @@ def custom_range(*args):
         step = args[2]
 
 
-    while start <= stop:
+    while start < stop:
         result = start
         yield result
         start += step 
-
-for x in custom_range(10):
-    print(x)
+try:
+    for x in custom_range(0, 20, 3):
+        print(x, end=' ')
+except Exception as e:
+    print(str(e))
