@@ -4,4 +4,4 @@ def find_factorial(num):
     else:
         return num * find_factorial(num-1)
     
-print(find_factorial(10))
+print(find_factorial(5))
