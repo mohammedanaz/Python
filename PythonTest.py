@@ -5,3 +5,13 @@ student_dicts = [
     {'name': 'John', 'class': 3, 'mark': 60},
 ]
 
+highest_mark = {'result': {'mark':-1}}
+
+def find_highest_mark(lst):
+
+    for obj in lst:
+        if highest_mark['result']['mark'] < obj['mark']:
+            highest_mark['result'] = obj
+    print(highest_mark['result'])
+
+find_highest_mark(student_dicts)
