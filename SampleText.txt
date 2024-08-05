@@ -1,2 +1,2 @@
-a sample text file.
+A sample text file.
 added a second line.
