@@ -1,7 +1,7 @@
-import re
 
-with open('SampleText.txt', 'r+') as f:
-    content = f.read()
-    f.seek(0)
-    new_content = re.sub(r'^a', 'A', content)
-    f.write(new_content)
+student_dicts = [
+    {'name': 'Adam', 'class': 1, 'mark': 40},
+    {'name': 'Eve', 'class': 2, 'mark': 50},
+    {'name': 'John', 'class': 3, 'mark': 60},
+]
+
