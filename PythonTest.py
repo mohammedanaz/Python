@@ -1,11 +1,7 @@
+import re
 
-def isPrime(n):
-    if n < 4:
-        return True
-    else:
-        for i in range(2, n):
-            if n % i == 0:
-                return False
-        return True
-    
-print(isPrime(11))
+with open('SampleText.txt', 'r+') as f:
+    content = f.read()
+    f.seek(0)
+    new_content = re.sub(r'^a', 'A', re.MULTILINE)
+    f.write(new_content)
