@@ -29,3 +29,6 @@ class Solution:
                 if (prices[j] - prices[i]) > max_profit:
                     max_profit = prices[j] - prices[i]
         return max_profit
+
+
+print(float('inf'))
