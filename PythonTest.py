@@ -20,6 +20,13 @@
 # Output: 0
 # Explanation: In this case, no transactions are done and the max profit = 0.
 
+
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        
+    prices = [7,1,5,3,6,4]
+    def maxProfit(self, prices) -> int:
+        max_profit = 0
+        for i in range(len(prices)):
+            for j in range(i+1, len(prices)):
+                if (prices[j] - prices[i]) > max_profit:
+                    max_profit = prices[j] - prices[i]
+            return max_profit
