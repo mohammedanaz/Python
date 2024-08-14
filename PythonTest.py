@@ -22,7 +22,6 @@
 
 
 class Solution:
-    prices = [7,1,5,3,6,4]
     def maxProfit(self, prices) -> int:
         max_profit = 0
         for i in range(len(prices)):
@@ -30,3 +29,6 @@ class Solution:
                 if (prices[j] - prices[i]) > max_profit:
                     max_profit = prices[j] - prices[i]
         return max_profit
+prices = [7,1,5,3,6,4]  
+obj = Solution() 
+print(obj.maxProfit(prices))
