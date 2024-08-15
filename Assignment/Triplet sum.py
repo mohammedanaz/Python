@@ -2,3 +2,4 @@
 
 # Notice that the solution set must not contain duplicate triplets.
 
+nums = [-1,0,1,2,-1,-4]
