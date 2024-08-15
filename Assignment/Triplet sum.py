@@ -25,3 +25,10 @@ for i in range(len(nums) - 2):
                 right -= 1
             left += 1
             right -= 1
+
+        elif sum < 0:
+            left += 1
+        else:
+            right -= 1
+
+print(result)
