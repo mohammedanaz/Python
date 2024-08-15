@@ -7,6 +7,7 @@
 nums = [-1,0,1,2,-1,-4]
 
 nums.sort()
+print(nums, '\n')
 result = []
 
 for i in range(len(nums) - 2):
