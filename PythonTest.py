@@ -6,16 +6,17 @@ s = 'abcabcdabc'
 result = 0
 sub_sting_arr = []
 
-for x in s:
-    if x not in sub_sting_arr:
-        sub_sting_arr.append(x)
+for i in range(len(s)):
+    if s[i] not in sub_sting_arr:
+        sub_sting_arr.append(s[i])
         if len(sub_sting_arr) > result:
             result = len(sub_sting_arr)
     else:
-        flag = 1
         if len(sub_sting_arr) > result:
             result = len(sub_sting_arr)
         sub_sting_arr.clear()
-        sub_sting_arr.append(x)
+        sub_sting_arr.append(s[i-1])
+        sub_sting_arr.append(s[i])
+
 
 
