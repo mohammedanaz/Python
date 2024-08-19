@@ -4,25 +4,22 @@
 s = 'abcabcdabc'
 
 result = 0
-sub_sting_arr = []
+sub_string_arr = []
+flag = 0
+
+length = 0
+sub_string_arr = []
 flag = 0
 
 for i in range(len(s)):
-    sub_sting_arr.append(s[i])
-    if len(sub_sting_arr) > result:
-        result = len(sub_sting_arr)
-    for j in range(i+1, len(s)):
-        if s[j] in sub_sting_arr:
-            if j == len(s)-1:
-                flag = 1
-            sub_sting_arr.clear()
-            break
-        else:
-            sub_sting_arr.append(s[j])
-            if len(sub_sting_arr) > result:
-                result = len(sub_sting_arr)
-            if j == len(s)-1:
-                flag = 1
-    if flag == 1:
-        break
-
+    if s[i] not in sub_string_arr:
+        sub_string_arr.append(s[i])
+        length = max(length, len(sub_string_arr))
+    else:
+        j = sub_string_arr.index(s[i])
+        while j >= 0:
+            sub_string_arr.pop(j)
+            j -= 1
+        
+        sub_string_arr.append(s[i])
+        length = max(length, len(sub_string_arr))
