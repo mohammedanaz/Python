@@ -5,11 +5,12 @@ start = time.perf_counter()
 def todo(seconds):
     print(f'sleeping for {seconds} seconds')
     time.sleep(seconds)
-    return 'sleep done'
+    return f'sleep done...in {seconds} seconds'
 
 with concurrent.futures.ThreadPoolExecutor() as ex:
-    results = [ex.submit(todo, 1) for _ in range(10)]
-    for f in results:
+    secs = [5,4,3,2,1]
+    results = [ex.submit(todo, sec) for sec in secs]
+    for f in concurrent.futures.as_completed(results):
         print(f.result())
 
 end = time.perf_counter()
