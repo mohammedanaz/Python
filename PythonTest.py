@@ -1,25 +1,17 @@
+import concurrent.futures
+import time
 
-# find longest substring in a string without repeating chars
+start = time.perf_counter()
+def todo(seconds):
+    print(f'sleeping for {seconds} seconds')
+    time.sleep(seconds)
+    return 'sleep done'
 
-s = 'abcabcdabc'
+with concurrent.futures.ThreadPoolExecutor() as ex:
+    f= ex.submit(todo, 1)
+    print(f.result())
 
-result = 0
-sub_string_arr = []
-flag = 0
+end = time.perf_counter()
+time_gap = round(end-start, 2)
 
-length = 0
-sub_string_arr = []
-flag = 0
-
-for i in range(len(s)):
-    if s[i] not in sub_string_arr:
-        sub_string_arr.append(s[i])
-        length = max(length, len(sub_string_arr))
-    else:
-        j = sub_string_arr.index(s[i])
-        while j >= 0:
-            sub_string_arr.pop(j)
-            j -= 1
-        
-        sub_string_arr.append(s[i])
-        length = max(length, len(sub_string_arr))
+print(f'Finished in {time_gap} seconds.')
