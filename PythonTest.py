@@ -11,3 +11,7 @@ async def myfn():
 
     # other codes B
 
+async def myfn():
+    await task = asyncio.create_task(# long code A) 
+
+    # other codes B
