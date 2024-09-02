@@ -23,7 +23,7 @@ def generateParentheses(n):
     return result
 
 # Example usage
-n = 2
+n = 3
 combinations = generateParentheses(n)
 for combo in combinations:
     print(combo)
