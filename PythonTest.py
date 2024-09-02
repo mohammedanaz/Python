@@ -1,17 +1,29 @@
+from collections import deque
 
-import asyncio
+def generateParentheses(n):
+    result = []
+    queue = deque([("", 0, 0)])  # Start with an empty string and 0 open and close counts
+    
+    while queue:
+        s, left, right = queue.popleft()
+        
+        # If the current string is complete, add it to the result
+        if len(s) == 2 * n:
+            result.append(s)
+            continue
+        
+        # Add an opening parenthesis if possible
+        if left < n:
+            queue.append((s + "(", left + 1, right))
+        
+        # Add a closing parenthesis if possible
+        if right < left:
+            queue.append((s + ")", left, right + 1))
+    
+    return result
 
-async def myfn():
-    await # long code A
-
-    # other codes B
-
-async def myfn():
-    task = asyncio.create_task(# long code A) 
-
-    # other codes B
-
-async def myfn():
-    await task = asyncio.create_task(# long code A) 
-
-    # other codes B
+# Example usage
+n = 1
+combinations = generateParentheses(n)
+for combo in combinations:
+    print(combo)
