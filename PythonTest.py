@@ -6,6 +6,7 @@ def generateParentheses(n):
     
     while queue:
         s, left, right = queue.popleft()
+        print(f's-{s}, left- {left}, right- {right}')
         
         # If the current string is complete, add it to the result
         if len(s) == 2 * n:
@@ -23,7 +24,7 @@ def generateParentheses(n):
     return result
 
 # Example usage
-n = 8
+n = 1
 combinations = generateParentheses(n)
 for combo in combinations:
     print(combo)
