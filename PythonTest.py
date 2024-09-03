@@ -1,30 +1,12 @@
-from collections import deque
+def count_letter(st):
+    dct = {}
+    for x in st:
+        if x in dct:
+            dct[x] += 1
+        else:
+            dct[x] =1
+        
+    for letter, count in dct.items():
+        print(f'{letter} - {count}')
 
-def generateParentheses(n):
-    result = []
-    queue = deque([("", 0, 0)])  # Start with an empty string and 0 open and close counts
-    
-    while queue:
-        s, left, right = queue.popleft()
-        print(f's-{s}, left- {left}, right- {right}')
-        
-        # If the current string is complete, add it to the result
-        if len(s) == 2 * n:
-            result.append(s)
-            continue
-        
-        # Add an opening parenthesis if possible
-        if left < n:
-            queue.append((s + "(", left + 1, right))
-        
-        # Add a closing parenthesis if possible
-        if right < left:
-            queue.append((s + ")", left, right + 1))
-    
-    return result
-
-# Example usage
-n = 1
-combinations = generateParentheses(n)
-for combo in combinations:
-    print(combo)
+count_letter('Happy')
