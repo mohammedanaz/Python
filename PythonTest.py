@@ -1,12 +1,15 @@
-def count_letter(st):
-    dct = {}
-    for x in st:
-        if x in dct:
-            dct[x] += 1
-        else:
-            dct[x] =1
-        
-    for letter, count in dct.items():
-        print(f'{letter} - {count}')
+arr = ['iah woh era uoy', 'aaa fde ffrt']
+result =[]
 
-count_letter('Happy')
+
+for x in arr:
+    split_x = x.split()
+    temp = []
+    s = ''
+    print(split_x)
+    for y in split_x:
+        temp.append(y[::-1])
+    s = ' '.join(temp)
+    result.append(s)
+
+print(result)
