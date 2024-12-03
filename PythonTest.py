@@ -1,12 +1,5 @@
-x =-1
+from mymodule import mySqr
 
-def change(a):
-    print('a-',a)
-    return abs(a)
-print('x-', x)
-b = change(x)
-
-print('b -', b)
-# x =b
-
-print('x -', x)
+print('hai')
+a = 10
+mySqr(a)

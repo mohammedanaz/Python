@@ -6,5 +6,5 @@ def mySqr(a):
 def myAdd(a):
    print(a+a)
 
-x = 10
-y = "Anz"
+if __name__=="__main__":
+    mySqr(10)
