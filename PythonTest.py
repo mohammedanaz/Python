@@ -1,5 +1,5 @@
-from mymodule import mySqr
-
-print('hai')
-a = 10
-mySqr(a)
+s = 'sample text'
+print(s.capitalize())
+print(s)
+print(s.title())
+print(s.strip())
