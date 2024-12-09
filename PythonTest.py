@@ -1,6 +1,5 @@
-s = 'sample text'
-print(s.capitalize())
-print(s)
-print(s.title())
-print(s.strip())
-print(s.find('t'))
+lst = [1,2,3,4,5]
+st = '12345'
+
+print(lst[:4])
+print(st[:4])
