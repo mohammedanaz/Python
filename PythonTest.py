@@ -1,4 +1,4 @@
-dct = {'a': 1, 'b': 2, 'c': 3}
+def fn(a, b, c):
+    print(a, b, c)
 
-print(dct.setdefault('d'))
-print(dct)
+fn(1, b=2, c=4)
