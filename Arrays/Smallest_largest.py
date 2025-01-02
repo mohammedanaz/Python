@@ -10,3 +10,5 @@ while left < right:
     right -= 1
 
 print(result)
+
+len()
